@@ -1,0 +1,66 @@
+@use "../abstracts/mixins" as mix;
+@use "../abstracts/variables" as var;
+@use "sass:math";
+
+.banner {
+  background-image: url(./banner.png);
+  background-position: bottom;
+  background-size: cover;
+  height: 70vh;
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  width: 100%;
+
+  @include mix.laptop-m-styles {
+    height: 60vh;
+  }
+
+  @include mix.tablet-styles {
+    height: 50vh;
+  }
+
+  @include mix.mobile-l-styles {
+    background-position: left;
+    justify-content: center;
+    align-items: flex-start;
+  }
+
+  h1 {
+    font-size: var.$heading-size-big * 2;
+    color: var.$text-color-base;
+    -webkit-animation: glow 1s ease-in-out infinite alternate;
+    -moz-animation: glow 1s ease-in-out infinite alternate;
+    animation: glow 1s ease-in-out infinite alternate;
+    margin-left: var.$gutter-base * 2;
+    font-family: monospace;
+    margin-top: 0;
+    margin-right: var.$gutter-base * 2;
+    margin-bottom: 0;
+
+    @include mix.laptop-m-styles {
+      font-size: var.$font-size-big * 3.5;
+    }
+
+    @include mix.tablet-styles {
+      font-size: var.$font-size-big * 2.5;
+      margin-right: var.$gutter-base;
+    }
+    @include mix.mobile-l-styles {
+      margin-top: var.$gutter-base;
+      margin-right: 0;
+      margin-left: 0;
+      font-size: var.$font-size-big * 2;
+    }
+  }
+  @keyframes glow {
+    from {
+      text-shadow: 0 0 10px #fcd232, 0 0 20px #fcd232, 0 0 30px #fcd232,
+        0 0 40px #fcd232, 0 0 50px #fcd232, 0 0 60px #fcd232, 0 0 70px #fcd232;
+    }
+    to {
+      text-shadow: 0 0 20px #fff, 0 0 30px #e7d070, 0 0 40px #e7d070,
+        0 0 50px #e7d070, 0 0 60px #e7d070, 0 0 70px #e7d070, 0 0 80px #e7d070;
+    }
+  }
+}

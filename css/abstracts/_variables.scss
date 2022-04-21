@@ -1,0 +1,43 @@
+// font settings
+$font-family-base: "Roboto", sans-serif;
+
+$font-size-smaller: 12px;
+$font-size-small: 14px;
+$font-size-base: 16px;
+$font-size-medium: 18px;
+$font-size-big: 20px;
+
+$heading-size-small: 24px;
+$heading-size-base: 36px;
+$heading-size-big: 50px;
+
+$font-weight-normal: 400;
+$font-weight-medium: 500;
+$font-weight-bold: 700;
+
+$line-height-base: 1.5;
+$line-height-small: 1.25;
+
+// colors
+
+$text-color-base: #000;
+$text-color-primary: #f8f8f8;
+$text-color-secondary: #f30404;
+$text-color-tertiary: #fcd232;
+
+$background-color-base: #f8f8f8;
+$background-color-primary: #fcd232;
+$background-color-secondary: #eb3b3b;
+$background-color-tertiary: #302f38;
+
+// size settings
+$gutter-base: 30px;
+$max-width-base: 80%;
+
+// border settings
+$border-width-base: 1px;
+$border-radius-base: 5px;
+
+// hover
+$primary-hover-color: darken($text-color-base, 20%);
+$secondary-hover-color: lighten($text-color-base, 20%);

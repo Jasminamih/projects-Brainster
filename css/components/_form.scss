@@ -1,0 +1,130 @@
+@use "../abstracts/mixins" as mix;
+@use "../abstracts/variables" as var;
+@use "sass:math";
+
+.form-page {
+  @extend %section;
+
+  h1 {
+    text-align: center;
+  }
+}
+
+form {
+  @extend %wrap;
+  margin-bottom: var.$gutter-base * 3;
+  display: flex;
+  flex-wrap: wrap;
+
+  .input {
+    flex-basis: 50%;
+    padding: math.div(var.$gutter-base, 3);
+    display: flex;
+    flex-direction: column;
+
+    @include mix.mobile-l-styles {
+      flex-basis: 100%;
+    }
+
+    input {
+      border: none;
+      border-radius: var.$border-radius-base;
+      height: 40px;
+      padding-left: math.div(var.$gutter-base, 3);
+
+      &:focus {
+        outline: none;
+      }
+    }
+
+    label {
+      font-weight: bold;
+    }
+
+    .btn-form {
+      margin-top: 25px;
+      height: 40px;
+      width: 100%;
+      margin-left: 0;
+      color: white;
+      background-color: red;
+      border: none;
+      border-radius: 5px;
+      cursor: pointer;
+
+      &:hover {
+        background-color: black;
+        color: var.$text-color-tertiary;
+        font-weight: bold;
+      }
+    }
+  }
+}
+
+.dropdown {
+  border: none;
+  border-radius: 5px;
+  height: 40px;
+  font-weight: bold;
+  padding-left: math.div(var.$gutter-base, 3);
+
+  &:focus {
+    outline: none;
+  }
+}
+
+.success-class {
+  visibility: hidden;
+  position: relative;
+
+  i {
+    color: rgb(18, 153, 18);
+    position: absolute;
+    bottom: 10px;
+    right: 25px;
+    @include mix.mobile-s-styles {
+      bottom: 5px;
+      right: -20px;
+    }
+  }
+}
+
+.error-class {
+  visibility: hidden;
+  position: relative;
+
+  i {
+    color: rgb(236, 15, 15);
+    position: absolute;
+    bottom: 40px;
+    right: 25px;
+
+    @include mix.mobile-s-styles {
+      bottom: 5px;
+      right: -20px;
+    }
+  }
+
+  .error-paragraph {
+    color: rgb(236, 15, 15);
+    font-size: var.$font-size-smaller;
+  }
+}
+
+.element-visible {
+  display: inline;
+  visibility: visible;
+}
+
+.element-hidden {
+  display: none;
+  visibility: hidden;
+}
+
+.error-border {
+  border: solid 3px rgb(236, 15, 15) !important;
+}
+
+.success-border {
+  border: solid 3px rgb(18, 153, 18) !important;
+}

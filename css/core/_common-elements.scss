@@ -1,0 +1,57 @@
+@use "../abstracts/variables" as var;
+html {
+  font-size: var.$font-size-base;
+  min-height: 100%;
+  position: relative;
+
+  @media (min-width: 1920px) {
+    font-size: var.$font-size-medium;
+  }
+}
+
+body {
+  font-family: var.$font-family-base;
+  font-weight: var.$font-weight-normal;
+  line-height: var.$line-height-base;
+  color: var.$text-color-base;
+  background-color: var.$background-color-primary;
+}
+
+h1 {
+  font-size: var.$heading-size-base;
+}
+
+h2 {
+  font-size: var.$heading-size-small;
+}
+
+h3 {
+  font-size: var.$font-size-medium;
+}
+
+.btn {
+  padding: 10px 15px;
+  display: inline-block;
+  line-height: 1.5;
+  border-radius: 6px;
+  background-color: red;
+  border: none;
+  cursor: pointer;
+
+  &:hover {
+    background-color: black;
+    -ms-transform: scale(1.1);
+    -webkit-transform: scale(1.1);
+    transform: scale(1.1);
+  }
+
+  &:hover a {
+    color: var.$text-color-tertiary;
+  }
+
+  a {
+    color: var.$text-color-primary;
+    text-decoration: none;
+    text-align: center;
+  }
+}

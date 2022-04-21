@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <!-- font-awesome -->
+    <link
+      rel="stylesheet"
+      href="https://use.fontawesome.com/releases/v5.4.1/css/all.css"
+      integrity="sha384-5sAR7xN1Nv6T6+dT2mhtzEpVJvfS3NScPQTrOxhwjIuvcA67KV2R5Jz6kr4abQsz"
+      crossorigin="anonymous"
+    />
+
+    <!-- Local CSS -->
+    <link rel="stylesheet" href="./css/main.css" />
+  </head>
+  <body>
+    <!-- navbar -->
+
+    <nav class="navbar">
+      <a class="logo" href="./index.html"
+        ><img src="./Design/Logo.png" alt="Logo" />Brainster</a
+      >
+      <div class="menu">
+        <div class="close-menu">x</div>
+        <ul>
+          <li class="menu-item">
+            <a href="https://brainster.co/marketing" target="_blank"
+              >Академија за маркетинг</a
+            >
+          </li>
+          <li class="menu-item">
+            <a href="https://brainster.co/front-end/" target="_blank"
+              >Академија за програмирање</a
+            >
+          </li>
+          <li class="menu-item">
+            <a href="https://brainster.co/data-science/" target="_blank"
+              >Академија за data science</a
+            >
+          </li>
+          <li class="menu-item">
+            <a href="https://brainster.co/graphic-design/" target="_blank"
+              >Академија за дизајн</a
+            >
+          </li>
+          <li class="btn">
+            <a href="./form.html">Вработи наш студент</a>
+          </li>
+        </ul>
+      </div>
+      <div class="menu-btn"><i class="fa fa-bars"></i></div>
+    </nav>
+
+    <!-- form -->
+
+    <section class="form-page">
+      <h1>Вработи студенти</h1>
+
+      <form id="form">
+        <div class="input">
+          <label for="name">Име и презиме</label>
+          <input type="text" id="name" placeholder="Вашето име и презиме" />
+          <div class="success-class">
+            <i class="fas fa-check-circle"></i>
+          </div>
+          <div class="error-class">
+            <i class="fas fa-exclamation-circle"></i>
+            <p class="error-paragraph">
+              <small>Ве молиме внесете го Вашето име и презиме</small>
+            </p>
+          </div>
+        </div>
+        <div class="input">
+          <label for="company">Име на компанија</label>
+          <input
+            type="text"
+            placeholder="Име на Вашата компанија"
+            id="company"
+          />
+          <div class="success-class"><i class="fas fa-check-circle"></i></div>
+          <div class="error-class">
+            <i class="fas fa-exclamation-circle"></i>
+            <p class="error-paragraph">
+              <small>Ве молиме внесете име на Вашата компанија</small>
+            </p>
+          </div>
+        </div>
+
+        <div class="input">
+          <label for="mail">Контакт емаил</label>
+          <input
+            type="email"
+            placeholder="Контакт емаил на Вашата компанија"
+            id="mail"
+          />
+
+          <div class="success-class"><i class="fas fa-check-circle"></i></div>
+          <div class="error-class">
+            <i class="fas fa-exclamation-circle"></i>
+            <p class="error-paragraph">
+              <small>Ве молиме внесете ја Вашата емаил адреса</small>
+            </p>
+          </div>
+        </div>
+
+        <div class="input">
+          <label for="tel">Контакт телефон</label>
+          <input
+            type="number"
+            placeholder="Контакт телефон на Вашата компанија"
+            id="tel"
+          />
+          <div class="success-class"><i class="fas fa-check-circle"></i></div>
+          <div class="error-class">
+            <i class="fas fa-exclamation-circle"></i>
+            <p class="error-paragraph">
+              <small>Ве молиме внесете го Вашиот телефонски број</small>
+            </p>
+          </div>
+        </div>
+
+        <div class="input">
+          <label for="studenti">Тип на студенти</label>
+
+          <select class="dropdown" name="studenti" id="studenti">
+            <option hidden>Изберете тип на студенти</option>
+            <option>Студенти од маркетинг</option>
+            <option>Студенти од програмирање</option>
+            <option>Студенти од data science</option>
+            <option>Студенти од дизајн</option>
+          </select>
+        </div>
+
+        <div class="input">
+          <button class="btn-form" id="submit">Испрати</button>
+        </div>
+      </form>
+    </section>
+
+    <!-- footer -->
+
+    <footer>
+      <p>
+        Изработено со <i class="fas fa-heart"></i> од студентите на Brainster
+      </p>
+    </footer>
+
+    <script src="./form.js"></script>
+  </body>
+</html>
